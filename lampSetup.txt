@@ -1,0 +1,81 @@
+http://www.youtube.com/watch?v=zQNbsCTFrAA
+
+Post installation commands
+
+man - get a manual page on another command (ex: man man)
+sudo - run a command with elevated privileges (as an administrator/root)
+pwd - prints the working (current) directory
+ls - Lists the contents of a directory
+cd - Changes into a directory, use cd .. to go to the parent directory, . is the current directory .. is one level up
+
+Update Ubuntu
+
+[In terminal]
+sudo apt-get install virtualbox-guest-dkms
+
+Shut down the virtual machine, modify virtual machine settings to enable 3d acceleration and increase video RAM, Change network settings to bridged so it can be seen on the local network.
+
+Launch Virtual Machine then Go to Devices (menu) -> Shared Clipboard -> Select Bi-Directional
+
+[In terminal]
+sudo apt-get install lamp-server^ phpmyadmin git curl chromium-browser
+
+Verify server installation is working
+In Firefox goto http://localhost/
+Download SublimeText 3 Beta and install
+
+Change user permissions on the /var/www folder where Apache serves it's files from by default (settings can be changed in the /etc/apache2/httpd.conf file or using the /etc/apache2/sites-available folder and a2ensite)
+
+[In terminal (http://www.intellectual-tech.com/setupScripts/setupWWWFolder.sh)]
+sudo usermod -a -G www-data shaun
+sudo chown -R shaun:www-data /var/www
+cd /var/www
+mkdir testProject1
+cd testProject1
+touch index.html
+subl .
+
+Save the file as /var/www/testProject1/index.html
+Type some HTML
+[In Chromium]
+goto http://localhost/testProject1/
+goto http://localhost/phpmyadmin/
+
+Install RUBY and RVM and configure [source: https://rvm.io/rvm/install]
+
+[In terminal (http://www.intellectual-tech.com/setupScripts/getRVMandRuby.sh)]
+\curl -L https://get.rvm.io | bash -s stable --ruby=2.1.0
+Go to Edit -> Profile Preferences -> Title and Command
+Click Run Command as a login shell and hit close (will cause .bash_profile to be loaded).
+ruby --version
+gem install compass
+compass
+
+Install node to the ~/local folder with this script [source: https://gist.github.com/isaacs/579814]
+
+echo 'export PATH=$HOME/local/bin:$PATH' >> ~/.bashrc
+echo 'export CHROME_BIN=/usr/bin/chromium-browser' >> ~/.bashrc
+. ~/.bashrc
+mkdir ~/local
+mkdir ~/node-latest-install
+cd ~/node-latest-install
+curl http://nodejs.org/dist/v0.10.22/node-v0.10.22.tar.gz | tar xz --strip-components=1
+./configure --prefix=~/local
+make install
+curl https://npmjs.org/install.sh | sh
+
+Install yeoman globally (automatically installs grunt and bower) and install the angular generator globally.
+
+npm install -g yo
+npm install -g generator-webapp generator-angular generator-wordpress
+cd /var/www
+mkdir testProject2
+yo angular
+Answer questions Green means selected, all are selected by default.
+subl .
+grunt serve
+grunt test
+grunt build
+
+https://npmjs.org/
+http://sindresorhus.com/bower-components/
