@@ -4,6 +4,14 @@
 
 - Some characters are processed specially by a shell and are known as *metacharacters*
 
-- >**`command`**: Command substition; replaced by the output of *command*
+- `command`: Command substition; replaced by the output of *command*
 
-- The sequence **$ command > fileName**
+- The sequence **$ command > fileName** sends the standard output of *command* to the file with name *fileName*
+
+- The sequence **$ command < fileName** executes *command* using the contents of file *fileName* as its standard input.  If the file does not exist or does not have read persmission an error occurs.
+
+
+A shell supports two kinds of variables: environment and local variables  Both hold data in string format.
+Environment variables
+When you precede the name of a variable with a $, this token sequence is replaced by the shell with the valye of the named variable
+
