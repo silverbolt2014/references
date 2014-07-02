@@ -6,4 +6,4 @@
 
 - **`command`**: Command substition; replaced by the output of *command*
 
-- The sequence **$ command > fileName __
+- The sequence **$ command > fileName__
