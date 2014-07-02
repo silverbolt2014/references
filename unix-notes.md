@@ -4,6 +4,6 @@
 
 - Some characters are processed specially by a shell and are known as *metacharacters*
 
-- **`command`**: Command substition; replaced by the output of *command*
+- >**`command`**: Command substition; replaced by the output of *command*
 
-- The sequence **$ command > fileName__
+- The sequence **$ command > fileName**
