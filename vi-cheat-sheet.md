@@ -1,11 +1,11 @@
 # Vi Cheat Sheet
 
-### In Command Mode
-**i** Text is inserted in from of the cursor
-
-| In Command Mode |
+### In Command Mode 
 | Key | Action |
-| **i**| Text is inserted in front of the cursor |
+| **i** | Text is inserted in front of the cursor |
+
+
+
 
 | Tables        | Are           | Cool  |
 | ------------- |:-------------:| -----:|
