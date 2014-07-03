@@ -15,3 +15,13 @@ A shell supports two kinds of variables: environment and local variables  Both h
 Environment variables
 When you precede the name of a variable with a $, this token sequence is replaced by the shell with the valye of the named variable
 
+- Every UNIX process terminates with an exit value.
+
+- child shell and sub shell refer to the same thing
+
+- A sub shell is created in the following circumstances:
+1. When running a grouped command (ls; pwd; date)
+2. When a script is executed
+3. When a backgroud job is executed
+
+For 1 and 2, if the command is not executed in the background, the parent shell sleeps until the child shell terminates
