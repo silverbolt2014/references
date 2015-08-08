@@ -103,7 +103,8 @@ One concept that we will not explore in great detail in these lessons is back re
 
 
 
-
-
-
-
+References:
+https://regex101.com/
+http://regexone.com/
+Also useful
+http://sqlbolt.com/
